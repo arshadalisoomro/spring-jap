@@ -9,8 +9,9 @@ import org.springframework.stereotype.Service;
 import com.project.entity.User;
 import com.project.repository.UserRepository;
 
-@Transactional
+
 @Service
+@Transactional
 public class InitDbService {
 	
 	@Resource
@@ -20,7 +21,7 @@ public class InitDbService {
 	public void init() {
 		User user = new User();
 		user.setName("Ali");
-		userRepository.save(user);
+		userRepository.saveAndFlush(user);
 		
 	}
 }

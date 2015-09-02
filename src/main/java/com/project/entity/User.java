@@ -3,21 +3,23 @@ package com.project.entity;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="users")
 public class User {
 	
 	@Id
 	@GeneratedValue
-	private Long id ;
+	private Integer id ;
 	
 	private String name ;
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
